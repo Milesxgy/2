@@ -47,8 +47,9 @@ const GlobalStrategy = ({ onPlaceholderClick }) => {
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2000&auto=format&fit=crop)' }}
         />
-        <div className="absolute inset-0 bg-[#0A369D]/80 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent" />
+        {/* Mobile optimized background overlay */}
+        <div className="absolute inset-0 bg-[#0A369D]/80 mix-blend-multiply md:bg-[#0A369D]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#010409]/80 via-[#010409]/40 to-transparent md:from-black/40" />
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">

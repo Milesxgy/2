@@ -21,20 +21,20 @@ const PlayerCard = ({ player }) => {
   return (
     <div className="group relative bg-[#0a111f] border border-white/[0.03] hover:border-[#00A3E0]/40 transition-all duration-500 overflow-hidden h-full">
       {/* Corner Accents */}
-      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#00A3E0]/50 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#00A3E0]/50 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#00A3E0]/50 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#00A3E0]/50 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+      <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#00A3E0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+      <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#00A3E0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+      <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#00A3E0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+      <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#00A3E0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
 
       <div className="aspect-[3/4] overflow-hidden grayscale contrast-110 group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-700 relative bg-[#010409]">
         <img
-          src={player.photo || `https://api.dicebear.com/9.x/identicon/svg?seed=${player.name}&backgroundColor=0a111f&rowColor=00A3E0`}
+          src={player.photo || `https://api.dicebear.com/9.x/micah/svg?seed=${player.name}&backgroundColor=0a111f&baseColor=f9c9b6`}
           alt={player.name}
           loading="lazy"
           crossOrigin="anonymous"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            const fallback = `https://api.dicebear.com/9.x/identicon/svg?seed=${player.name}&backgroundColor=0a111f&rowColor=00A3E0`;
+            const fallback = `https://api.dicebear.com/9.x/micah/svg?seed=${player.name}&backgroundColor=0a111f&baseColor=f9c9b6`;
             if (target.src !== fallback) {
               target.src = fallback;
             }
@@ -48,12 +48,14 @@ const PlayerCard = ({ player }) => {
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#010409] via-[#010409]/40 to-transparent opacity-90 pointer-events-none" />
+        
         {/* Scanning Line */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00A3E0]/20 to-transparent h-1/4 w-full animate-scan-slow pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00A3E0]/30 to-transparent h-1/3 w-full animate-scan-slow pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-screen" />
       </div>
+      
       <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 lg:p-8 space-y-1 md:space-y-2 pointer-events-none z-20">
         <div className="flex items-center space-x-2">
-          <div className="w-1 h-3 bg-[#00A3E0] group-hover:w-4 transition-all" />
+          <div className="w-1 h-3 bg-[#00A3E0] group-hover:w-4 transition-all duration-300" />
           <span className="text-[8px] md:text-[9px] font-black text-[#00A3E0] uppercase tracking-[0.4em]">
             {player.position}
           </span>
@@ -62,9 +64,9 @@ const PlayerCard = ({ player }) => {
           {player.name}
         </h3>
       </div>
+      
       {/* Breathing Border */}
-      <div className="absolute inset-0 border border-[#00A3E0]/0 group-hover:border-[#00A3E0]/20 group-hover:animate-pulse transition-all duration-700 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[1px] h-0 bg-[#00A3E0]/40 group-hover:h-full transition-all duration-700" />
+      <div className="absolute inset-0 border border-[#00A3E0]/0 group-hover:border-[#00A3E0]/30 group-hover:animate-pulse transition-all duration-700 pointer-events-none z-20" />
     </div>
   );
 };
