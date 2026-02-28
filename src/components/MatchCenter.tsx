@@ -11,7 +11,7 @@ const MatchCenter = ({ matches, onPlaceholderClick }) => {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <section id="matches" className="py-32 bg-white">
+    <section id="matches" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <motion.div 

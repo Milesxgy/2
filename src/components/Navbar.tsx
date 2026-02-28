@@ -43,32 +43,35 @@ const Navbar = ({ onPlaceholderClick, onOpenStories }) => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#" onClick={(e) => handleNavClick(e, 'hero')} className="text-xs font-bold text-white hover:text-[#00A3E0] transition-colors">
-              首页
+            <a href="#matches" onClick={(e) => handleNavClick(e, 'matches')} className="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-widest transition-colors">
+              Matches
             </a>
-            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-xs font-bold text-slate-300 hover:text-white transition-colors">
-              关于俱乐部
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-widest transition-colors">
+              About
             </a>
-            <a href="#matches" onClick={(e) => handleNavClick(e, 'matches')} className="text-xs font-bold text-slate-300 hover:text-white transition-colors">
-              近期赛程
+            <a href="#squad" onClick={(e) => handleNavClick(e, 'squad')} className="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-widest transition-colors">
+              Squad
             </a>
-            <a href="#squad" onClick={(e) => handleNavClick(e, 'squad')} className="text-xs font-bold text-slate-300 hover:text-white transition-colors">
-              梯队阵容
+            <a href="#training" onClick={(e) => handleNavClick(e, 'training')} className="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-widest transition-colors">
+              Training
             </a>
-            <a href="#global" onClick={(e) => handleNavClick(e, 'global')} className="text-xs font-bold text-slate-300 hover:text-white transition-colors">
-              算力中心
+            <a href="#global" onClick={(e) => handleNavClick(e, 'global')} className="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-widest transition-colors">
+              Global
             </a>
-            <button onClick={onOpenStories} className="text-xs font-bold text-slate-300 hover:text-white transition-colors">
-              俱乐部故事
-            </button>
           </div>
 
           <div className="flex items-center space-x-4">
             <button
-              onClick={e => onPlaceholderClick(e, 'SUANLI HUB')}
-              className="hidden md:block px-6 py-2 border border-white/20 text-white hover:bg-white hover:text-black text-[10px] font-black uppercase tracking-widest transition-all"
+              onClick={e => onPlaceholderClick(e, 'Academy')}
+              className="hidden md:block px-6 py-2 border border-[#00A3E0]/30 text-[#00A3E0] hover:bg-[#00A3E0] hover:text-black text-[10px] font-black uppercase tracking-widest transition-all"
             >
-              SUANLI HUB
+              Academy
+            </button>
+            <button
+              onClick={onOpenStories}
+              className="hidden md:block px-6 py-2 bg-white text-black hover:bg-[#00A3E0] text-[10px] font-black uppercase tracking-widest transition-all"
+            >
+              Archives
             </button>
             
             {/* Mobile Menu Toggle */}

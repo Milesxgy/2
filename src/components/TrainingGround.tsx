@@ -8,7 +8,7 @@ const TrainingGround = () => {
   ];
 
   return (
-    <section id="training" className="py-32 bg-[#010409] border-y border-white/5 relative overflow-hidden">
+    <section id="training" className="py-20 md:py-32 bg-[#010409] border-y border-white/5 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#00A3E0]/[0.02] skew-x-[-15deg] pointer-events-none" />
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">

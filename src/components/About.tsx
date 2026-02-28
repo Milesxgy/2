@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="py-40 bg-[#00050a] relative overflow-hidden border-y border-white/5">
+    <section id="about" className="py-20 md:py-40 bg-[#00050a] relative overflow-hidden border-y border-white/5">
       <div className="absolute right-0 top-0 w-1/3 h-full bg-[#00A3E0]/5 skew-x-[-15deg]" />
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">

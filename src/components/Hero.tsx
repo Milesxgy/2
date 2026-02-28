@@ -5,16 +5,17 @@ const Hero = ({ onOpenStories }) => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A111F] pt-20">
       {/* Background Image - Right Side */}
-      <div className="absolute inset-0 z-0 flex justify-end">
+      <div className="absolute inset-0 z-0 flex justify-end pointer-events-none">
         <div className="w-full lg:w-3/5 h-full relative">
           {/* Gradients to blend the image smoothly into the dark background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A111F] via-[#0A111F]/60 to-transparent z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A111F] via-transparent to-transparent z-10" />
-          <div className="absolute inset-0 bg-[#00A3E0]/10 mix-blend-color z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A111F] via-[#0A111F]/80 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A111F] via-[#0A111F]/20 to-transparent z-10" />
+          {/* Classic Blue tint overlay */}
+          <div className="absolute inset-0 bg-[#00A3E0]/20 mix-blend-multiply z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=2000&auto=format&fit=crop" 
-            alt="Football Background" 
-            className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
+            src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2000&auto=format&fit=crop" 
+            alt="Professional Football Stadium" 
+            className="w-full h-full object-cover opacity-40 grayscale contrast-125 mix-blend-luminosity"
             referrerPolicy="no-referrer"
           />
         </div>
