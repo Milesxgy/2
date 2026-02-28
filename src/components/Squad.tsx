@@ -127,7 +127,7 @@ const Squad = ({ players }) => {
         </div>
 
         <div className="transition-all duration-1000 min-h-[600px]">
-          {activeTeam === 'SECOND' ? (
+          {activeTeam === 'SECOND' || activeTeam === 'THIRD' ? (
             <div className="py-32 flex flex-col items-center justify-center text-center border border-white/5 bg-[#00A3E0]/[0.02]">
               <div className="w-24 h-24 mb-8 text-[#00A3E0] animate-pulse">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,10 +135,10 @@ const Squad = ({ players }) => {
                 </svg>
               </div>
               <h3 className="text-4xl font-black uppercase italic text-white mb-4 tracking-tighter">
-                职业化构建中
+                {activeTeam === 'SECOND' ? '职业化构建中' : '社群基石构建中'}
               </h3>
               <p className="text-slate-500 font-mono tracking-widest uppercase text-xs opacity-60 font-black italic mt-2">
-                // PRO ASSET DEPLOYMENT IN PROGRESS...
+                {activeTeam === 'SECOND' ? '// PRO ASSET DEPLOYMENT IN PROGRESS...' : '// COMMUNITY ASSET DEPLOYMENT IN PROGRESS...'}
               </p>
             </div>
           ) : (
