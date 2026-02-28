@@ -135,7 +135,7 @@ const Squad = ({ players }) => {
                 </svg>
               </div>
               <h3 className="text-4xl font-black uppercase italic text-white mb-4 tracking-tighter">
-                {activeTeam === 'SECOND' ? '职业化构建中' : '社群基石构建中'}
+                {activeTeam === 'SECOND' ? '职业化建设中' : '社群基石建设中'}
               </h3>
               <p className="text-slate-500 font-mono tracking-widest uppercase text-xs opacity-60 font-black italic mt-2">
                 {activeTeam === 'SECOND' ? '// PRO ASSET DEPLOYMENT IN PROGRESS...' : '// COMMUNITY ASSET DEPLOYMENT IN PROGRESS...'}
