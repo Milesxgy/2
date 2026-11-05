@@ -1,17 +1,9 @@
-# 北京算力足球俱乐部官方网站
+# 北京算力官网 · 原版风格回归
 
-最新融合版：保留原官网深色科技蓝、草坪封面、中国足球先驱者及两句原版标语，完整三项赛事名单15/16/26、三梯队安排、组织产业和文化内容。四场经典比赛年份已更正为2025，删除俱乐部场地。
+恢复原官网蓝黑风格、草坪封面、原始文化、三梯队、国际视野，删除场地，无产业版图及学院与文化页面或入口。保留原点15人、皇城根16人、D1七人制26人完整报名阵容、三项亚军、卡通头像、球员档案与中英文一键切换。过去比赛年份统一2025。
 
-## 构建
+仓库使用 website-release.tar.gz 作为可直接部署的构建产物。npm ci --ignore-scripts 后执行 npm run build，输出 dist。Vercel/Netlify/Cloudflare Pages 发布 dist。此构建无需第三方依赖。
 
-Node.js20及以上，运行 npm ci --ignore-scripts，再运行 npm run build。构建输出 dist/，无外部依赖、私密API Key、数据库或运行时外部资源。
+build-site.mjs 校验压缩包 SHA256 并安全解压。仓库旧 src/ 留作历史参考，不是当前线上构建入口；完整可编辑 React/Vite 源码另随源码包交付。修改后重新构建并更新压缩包及校验值。
 
-website-release.tar.gz 内包含全部HTML、CSS、JS、JSON、真实摄影、卡通头像及本地字体。build-site.mjs先验证归档SHA256，再将文件还原到dist。vercel.json和netlify.toml保留npm run build到dist的标准部署方式。
-
-当前生效源在发布归档中；旧src/、vite.config.ts、index.html仅为旧版历史参考，不参与本次构建。独立维护源码可以从归档解压；修改后重新打包并更新构建脚本的SHA256。
-
-## 识别是否发布成功
-
-新站 /release.json 返回 release: 2026-11-05-original-cover。GitHub提交可能触发已关联的Vercel自动部署，但不代表阿里云Nginx会同步；suanli-fc.com是否更新必须单独访问验证。
-
-原站历史与旧文件由Git保存。摄影资料与许可说明在发布归档内的页面“资料与图像说明”及assets字体许可中保留。
+域名服务器是否自动同步取决于原服务器配置，GitHub 更新不能单独证明原域名更新。

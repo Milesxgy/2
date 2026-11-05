@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const packed = readFileSync(path.join(root, 'website-release.tar.gz'));
-if (createHash('sha256').update(packed).digest('hex') !== 'a87aa274b83393f23bbb9ee03b84504a0ecca8a358261ed034e6e95905079476') throw new Error('Website archive checksum mismatch');
+if (createHash('sha256').update(packed).digest('hex') !== '783ac060073f75feecfc65747387a19a1257c9f964204e36d6ffc56cecec56d3') throw new Error('Website archive checksum mismatch');
 const tar = gunzipSync(packed);
 const entries = [];
 for (let offset = 0; offset + 512 <= tar.length;) {
@@ -30,5 +30,4 @@ for (const [name, data] of entries) {
   mkdirSync(path.dirname(destination), { recursive: true });
   writeFileSync(destination, data);
 }
-writeFileSync(path.join(output, 'release.json'), JSON.stringify({site:'beijing-suanli-fc',release:'2026-11-05-original-cover',rosters:[15,16,26]})+'\n');
 console.log(`Built ${entries.length} website files to dist/`);
