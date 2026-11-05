@@ -7,3 +7,5 @@
 build-site.mjs 校验压缩包 SHA256 并安全解压。仓库旧 src/ 留作历史参考，不是当前线上构建入口；完整可编辑 React/Vite 源码另随源码包交付。修改后重新构建并更新压缩包及校验值。
 
 域名服务器是否自动同步取决于原服务器配置，GitHub 更新不能单独证明原域名更新。
+
+本次仅恢复原版无图片三栏卡片与合作表单。表单 HTTPS 接入俱乐部阿里云，记录私有持久化保存，未配置自动邮件通知。cooperation-backend.tar.gz 为后端源码、安装脚本与测试。release.json 标记 2026-11-05-original-cooperation。

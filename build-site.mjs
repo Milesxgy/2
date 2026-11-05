@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const packed = readFileSync(path.join(root, 'website-release.tar.gz'));
-if (createHash('sha256').update(packed).digest('hex') !== '783ac060073f75feecfc65747387a19a1257c9f964204e36d6ffc56cecec56d3') throw new Error('Website archive checksum mismatch');
+if (createHash('sha256').update(packed).digest('hex') !== '94c926d9af89c656da8bec057a318efc078efe4b759539ff24db3d490336ff94') throw new Error('Website archive checksum mismatch');
 const tar = gunzipSync(packed);
 const entries = [];
 for (let offset = 0; offset + 512 <= tar.length;) {
